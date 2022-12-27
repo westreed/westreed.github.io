@@ -10284,7 +10284,7 @@ body > .section {
 }
 .blogTitle {
   position: absolute;
-  top: 340px;
+  top: 26vw;
   right: 100px;
   color: #fff;
   font-weight: bold;
@@ -10292,6 +10292,18 @@ body > .section {
 }
 .blogTitle.is-active {
   color: #fff;
+}
+.titleSize {
+  flex: 1;
+  height: 41vw;
+}
+@media screen and (min-width: 1088px) {
+  .blogTitle {
+    top: 283px;
+  }
+  .titleSize {
+    height: 450px;
+  }
 }
 .ml-0,
 .mx-0 {
