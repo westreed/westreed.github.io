@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://westreed.github.io/sitemap.xml

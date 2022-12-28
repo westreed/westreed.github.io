@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>:AiM</title>
+    <link>https://westreed.github.io/</link>
+    
+    <atom:link href="https://westreed.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>갈대의 블로그</description>
+    <pubDate>Wed, 28 Dec 2022 03:44:39 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>포스트에 이미지와 유튜브영상 올려보기</title>
+      <link>https://westreed.github.io/2022/12/27/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EC%97%90-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%EC%9C%A0%ED%8A%9C%EB%B8%8C%EC%98%81%EC%83%81-%EC%98%AC%EB%A0%A4%EB%B3%B4%EA%B8%B0/</link>
+      <guid>https://westreed.github.io/2022/12/27/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EC%97%90-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%EC%9C%A0%ED%8A%9C%EB%B8%8C%EC%98%81%EC%83%81-%EC%98%AC%EB%A0%A4%EB%B3%B4%EA%B8%B0/</guid>
+      <pubDate>Tue, 27 Dec 2022 12:03:14 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;이미지-업로드하기&quot;&gt;&lt;a href=&quot;#이미지-업로드하기&quot; class=&quot;headerlink&quot; title=&quot;이미지 업로드하기&quot;&gt;&lt;/a&gt;이미지 업로드하기&lt;/h2&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/westree</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="이미지-업로드하기"><a href="#이미지-업로드하기" class="headerlink" title="이미지 업로드하기"></a>이미지 업로드하기</h2><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/externalFile111.gif?style=centerme" alt="업로드된 이미지"/><p>source폴더 안에 images 폴더를 하나 만들어두고, 해당 폴더 안에 이미지를 넣어서 사용해야한다.<br>포스트 제목과 같은 폴더를 하나 만든 후, 해당 폴더 안에 이미지를 넣어두고, 아래 코드처럼 작성하면 이미지를 불러올 수 있다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/images/파일명.확장자?style=centerme&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;이미지설명&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><p>조오금 불편하긴 하지만 익숙해져야 할듯..<br>뒤에 <font color="#c0504d">style&#x3D;centerme</font>는 <a href="https://datadoctorblog.com/2020/03/24/HEXO-ICARUS-thumbnail/">링크</a>를 참고했다. style로 centerme를 주면 이미지가 자동으로 가운데정렬이 되는 방식.</p><h2 id="유튜브-영상-올리기"><a href="#유튜브-영상-올리기" class="headerlink" title="유튜브 영상 올리기"></a>유튜브 영상 올리기</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/TdjbenWWSxc" frameborder="0" loading="lazy" allowfullscreen></iframe></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube 영상링크 %&#125;</span><br><span class="line"></span><br><span class="line">ex. &#123;% youtube TdjbenWWSxc %&#125;</span><br></pre></td></tr></table></figure><p>그나마 유튜브는 Hexo에서 지원하는 양식을 사용하는게 제일 편하다.<br>영상링크의 모든 주소는 아니고 <span style="background:#b1ffff">id값</span>만 가져오면 된다.</p>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/Hexo/">Hexo</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/Hexo/">Hexo</category>
+      
+      <category domain="https://westreed.github.io/tags/Icarus/">Icarus</category>
+      
+      
+      <comments>https://westreed.github.io/2022/12/27/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EC%97%90-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%EC%9C%A0%ED%8A%9C%EB%B8%8C%EC%98%81%EC%83%81-%EC%98%AC%EB%A0%A4%EB%B3%B4%EA%B8%B0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>게시글 작성</title>
+      <link>https://westreed.github.io/2022/12/26/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1/</link>
+      <guid>https://westreed.github.io/2022/12/26/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1/</guid>
+      <pubDate>Mon, 26 Dec 2022 09:06:39 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;테스트-게시글&quot;&gt;&lt;a href=&quot;#테스트-게시글&quot; class=&quot;headerlink&quot; title=&quot;테스트 게시글&quot;&gt;&lt;/a&gt;테스트 게시글&lt;/h2&gt;&lt;p&gt;안녕하세요, 테스트를 위해 작성해보고 있습니다.&lt;/p&gt;
+&lt;figure class=&quot;high</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="테스트-게시글"><a href="#테스트-게시글" class="headerlink" title="테스트 게시글"></a>테스트 게시글</h2><p>안녕하세요, 테스트를 위해 작성해보고 있습니다.</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">Speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;멍!&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      
+      
+      <comments>https://westreed.github.io/2022/12/26/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://westreed.github.io/2022/12/26/hello-world/</link>
+      <guid>https://westreed.github.io/2022/12/26/hello-world/</guid>
+      <pubDate>Mon, 26 Dec 2022 07:05:39 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>https://westreed.github.io/2022/12/26/hello-world/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
