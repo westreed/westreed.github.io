@@ -10283,7 +10283,7 @@ body > .section {
 }
 .blogTitle {
   position: absolute;
-  top: 26vw;
+  top: 24vw;
   right: 100px;
   color: #fff;
   font-weight: bold;
@@ -10298,7 +10298,7 @@ body > .section {
 }
 @media screen and (min-width: 1088px) {
   .blogTitle {
-    top: 283px;
+    top: 261px;
   }
   .titleSize {
     height: 450px;
