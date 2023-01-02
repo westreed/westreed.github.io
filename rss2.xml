@@ -9,8 +9,127 @@
     <atom:link href="https://westreed.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>갈대의 블로그</description>
-    <pubDate>Sun, 01 Jan 2023 07:35:27 GMT</pubDate>
+    <pubDate>Mon, 02 Jan 2023 06:54:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>(2019카카오개발자겨울인턴십) 크레인 인형뽑기 게임</title>
+      <link>https://westreed.github.io/2023/01/02/202301/(2019%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B2%A8%EC%9A%B8%EC%9D%B8%ED%84%B4%EC%8B%AD)-%ED%81%AC%EB%A0%88%EC%9D%B8-%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0-%EA%B2%8C%EC%9E%84/</link>
+      <guid>https://westreed.github.io/2023/01/02/202301/(2019%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B2%A8%EC%9A%B8%EC%9D%B8%ED%84%B4%EC%8B%AD)-%ED%81%AC%EB%A0%88%EC%9D%B8-%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0-%EA%B2%8C%EC%9E%84/</guid>
+      <pubDate>Mon, 02 Jan 2023 06:45:01 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;문제설명&quot;&gt;&lt;a href=&quot;#문제설명&quot; class=&quot;headerlink&quot; title=&quot;문제설명&quot;&gt;&lt;/a&gt;문제설명&lt;/h2&gt;&lt;p&gt;게임개발자인 “죠르디”는 크레인 인형뽑기 기계를 모바일 게임으로 만들려고 합니다.&lt;br&gt;“죠르디”는 게임의 재미</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>게임개발자인 “죠르디”는 크레인 인형뽑기 기계를 모바일 게임으로 만들려고 합니다.<br>“죠르디”는 게임의 재미를 높이기 위해 화면 구성과 규칙을 다음과 같이 게임 로직에 반영하려고 합니다.</p><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202301/crane_game_101.png?style=centerme" alt="크레인게임 이미지"/><p>게임 화면은 “1 x 1” 크기의 칸들로 이루어진 “N x N” 크기의 정사각 격자이며 위쪽에는 크레인이 있고 오른쪽에는 바구니가 있습니다. (위 그림은 “5 x 5” 크기의 예시입니다). 각 격자 칸에는 다양한 인형이 들어 있으며 인형이 없는 칸은 빈칸입니다. 모든 인형은 “1 x 1” 크기의 격자 한 칸을 차지하며 격자의 가장 아래 칸부터 차곡차곡 쌓여 있습니다. 게임 사용자는 크레인을 좌우로 움직여서 멈춘 위치에서 가장 위에 있는 인형을 집어 올릴 수 있습니다. 집어 올린 인형은 바구니에 쌓이게 되는 데, 이때 바구니의 가장 아래 칸부터 인형이 순서대로 쌓이게 됩니다. 다음 그림은 <code>[1번, 5번, 3번]</code> 위치에서 순서대로 인형을 집어 올려 바구니에 담은 모습입니다.</p><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202301/crane_game_102.png?style=centerme" alt="크레인게임 이미지"/><p>만약 같은 모양의 인형 두 개가 바구니에 연속해서 쌓이게 되면 두 인형은 터뜨려지면서 바구니에서 사라지게 됩니다. 위 상태에서 이어서 <code>[5번]</code> 위치에서 인형을 집어 바구니에 쌓으면 같은 모양 인형 두 개가 없어집니다.</p><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202301/crane_game_103.gif?style=centerme" alt="크레인게임 이미지"/><p>크레인 작동 시 인형이 집어지지 않는 경우는 없으나 만약 인형이 없는 곳에서 크레인을 작동시키는 경우에는 아무런 일도 일어나지 않습니다. 또한 바구니는 모든 인형이 들어갈 수 있을 만큼 충분히 크다고 가정합니다. (그림에서는 화면표시 제약으로 5칸만으로 표현하였음)</p><p>게임 화면의 격자의 상태가 담긴 2차원 배열 board와 인형을 집기 위해 크레인을 작동시킨 위치가 담긴 배열 moves가 매개변수로 주어질 때, 크레인을 모두 작동시킨 후 터트려져 사라진 인형의 개수를 return 하도록 solution 함수를 완성해주세요.</p><p>출처<br><a href="https://programmers.co.kr/learn/courses/30/lessons/64061">https://programmers.co.kr/learn/courses/30/lessons/64061</a></p><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul><li>board 배열은 2차원 배열로 크기는 “5 x 5” 이상 “30 x 30” 이하입니다.</li><li>board의 각 칸에는 0 이상 100 이하인 정수가 담겨있습니다.</li><li>0은 빈 칸을 나타냅니다.</li><li>1 ~ 100의 각 숫자는 각기 다른 인형의 모양을 의미하며 같은 숫자는 같은 모양의 인형을 나타냅니다.</li><li>moves 배열의 크기는 1 이상 1,000 이하입니다.</li><li>moves 배열 각 원소들의 값은 1 이상이며 board 배열의 가로 크기 이하인 자연수입니다.</li></ul><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th>board</th><th>moves</th><th>result</th></tr></thead><tbody><tr><td><code>[[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]]</code></td><td><code>[1,5,3,5,1,2,1,4]</code></td><td>4</td></tr></tbody></table><h2 id="문제해설"><a href="#문제해설" class="headerlink" title="문제해설"></a>문제해설</h2><p>moves 에 의해 특정원소를 스택구조에 담아서, 이전 스택값과 현재스택값이 같으면 result값을 1 더하는 식으로 해석할 수 있습니다.</p><p>board의 1행인 <code>[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]</code>값은 바구니에 담긴 인형들의 각 라인을 의미합니다. <code>board[0]</code>은 바구니의 최상단 라인인 셈이죠.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">solution</span>(<span class="params">board, moves</span>):</span><br><span class="line">choose = [] <span class="comment"># 뽑은 인형 리스트</span></span><br><span class="line">front = -<span class="number">1</span> <span class="comment"># Stack</span></span><br><span class="line">Answer = <span class="number">0</span> <span class="comment"># 정답</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> moves: <span class="comment"># 크레인 행동</span></span><br><span class="line"><span class="keyword">for</span> l <span class="keyword">in</span> board: <span class="comment"># 각 라인 검색</span></span><br><span class="line"><span class="keyword">if</span> l[m-<span class="number">1</span>] == <span class="number">0</span>: <span class="keyword">continue</span></span><br><span class="line"><span class="comment"># 해당 라인이 0이면 ( 인형이 없는 경우 )</span></span><br><span class="line">choose.append(l[m-<span class="number">1</span>]) <span class="comment"># 인형을 적재리스트에 넣기</span></span><br><span class="line">front += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 스택에 2개이상 값이 있고, 두 인형이 같을 때</span></span><br><span class="line"><span class="keyword">if</span> front &gt; <span class="number">0</span> <span class="keyword">and</span> choose[front] == choose[front-<span class="number">1</span>]:</span><br><span class="line"><span class="keyword">del</span> choose[front]</span><br><span class="line"><span class="keyword">del</span> choose[front-<span class="number">1</span>]</span><br><span class="line">front -= <span class="number">2</span></span><br><span class="line">Answer += <span class="number">2</span></span><br><span class="line"></span><br><span class="line">l[m-<span class="number">1</span>] = <span class="number">0</span> <span class="comment"># 인형을 뽑았으므로 해당 칸은 0으로 대입</span></span><br><span class="line"><span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> Answer</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/Python/">Python</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://westreed.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/">코딩테스트</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/02/202301/(2019%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B2%A8%EC%9A%B8%EC%9D%B8%ED%84%B4%EC%8B%AD)-%ED%81%AC%EB%A0%88%EC%9D%B8-%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0-%EA%B2%8C%EC%9E%84/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>(2020카카오공채) 문자열 압축 문제</title>
+      <link>https://westreed.github.io/2023/01/02/202301/(2020%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B3%B5%EC%B1%84)-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%95%95%EC%B6%95-%EB%AC%B8%EC%A0%9C/</link>
+      <guid>https://westreed.github.io/2023/01/02/202301/(2020%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B3%B5%EC%B1%84)-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%95%95%EC%B6%95-%EB%AC%B8%EC%A0%9C/</guid>
+      <pubDate>Mon, 02 Jan 2023 06:35:28 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;문제설명&quot;&gt;&lt;a href=&quot;#문제설명&quot; class=&quot;headerlink&quot; title=&quot;문제설명&quot;&gt;&lt;/a&gt;문제설명&lt;/h2&gt;&lt;p&gt;데이터 처리 전문가가 되고 싶은 어피치는 문자열을 압축하는 방법에 대해 공부를 하고 있습니다. 최근에 대량의 데</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>데이터 처리 전문가가 되고 싶은 어피치는 문자열을 압축하는 방법에 대해 공부를 하고 있습니다. 최근에 대량의 데이터 처리를 위한 간단한 비손실 압축 방법에 대해 공부를 하고 있는데, 문자열에서 같은 값이 연속해서 나타나는 것을 그 문자의 개수와 반복되는 값으로 표현하여 더 짧은 문자열로 줄여서 표현하는 알고리즘을 공부하고 있습니다.</p><p>간단한 예로 aabbaccc의 경우 2a2ba3c(문자가 반복되지 않아 한번만 나타난 경우 1은 생략함)와 같이 표현할 수 있는데, 이러한 방식은 반복되는 문자가 적은 경우 압축률이 낮다는 단점이 있습니다. 예를 들면, abcabcdede와 같은 문자열은 전혀 압축되지 않습니다. 어피치는 이러한 단점을 해결하기 위해 문자열을 1개 이상의 단위로 잘라서 압축하여 더 짧은 문자열로 표현할 수 있는지 방법을 찾아보려고 합니다.</p><p>예를 들어, ababcdcdababcdcd의 경우 문자를 1개 단위로 자르면 전혀 압축되지 않지만, 2개 단위로 잘라서 압축한다면 2ab2cd2ab2cd로 표현할 수 있습니다. 다른 방법으로 8개 단위로 잘라서 압축한다면 2ababcdcd로 표현할 수 있으며, 이때가 가장 짧게 압축하여 표현할 수 있는 방법입니다.</p><p>다른 예로, abcabcdede와 같은 경우, 문자를 2개 단위로 잘라서 압축하면 abcabc2de가 되지만, 3개 단위로 자른다면 2abcdede가 되어 3개 단위가 가장 짧은 압축 방법이 됩니다. 이때 3개 단위로 자르고 마지막에 남는 문자열은 그대로 붙여주면 됩니다.</p><p>압축할 문자열 s가 매개변수로 주어질 때, 위에 설명한 방법으로 1개 이상 단위로 문자열을 잘라 압축하여 표현한 문자열 중 가장 짧은 것의 길이를 return 하도록 solution 함수를 완성해주세요.</p><h2 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h2><ul><li>s의 길이는 1 이상 1,000 이하입니다.</li><li>s는 알파벳 소문자로만 이루어져 있습니다.</li></ul><h2 id="입출력-예"><a href="#입출력-예" class="headerlink" title="입출력 예"></a>입출력 예</h2><table><thead><tr><th>S</th><th>Result</th></tr></thead><tbody><tr><td>“aabbaccc”</td><td>7</td></tr><tr><td>“ababcdcdababcdcd”</td><td>9</td></tr><tr><td>“abcabcdede”</td><td>8</td></tr><tr><td>“abcabcabcabcdededededede”</td><td>14</td></tr><tr><td>“xababcdcdababcdcd”</td><td>17</td></tr></tbody></table><h2 id="작성한-코드"><a href="#작성한-코드" class="headerlink" title="작성한 코드"></a>작성한 코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">solution</span>(<span class="params">s</span>):</span><br><span class="line">s_len = <span class="built_in">len</span>(s)</span><br><span class="line">ans_list = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,s_len+<span class="number">1</span>):</span><br><span class="line">t = math.ceil(s_len/i)</span><br><span class="line">t1 = <span class="number">0</span></span><br><span class="line">index = <span class="number">0</span></span><br><span class="line">num = <span class="number">1</span></span><br><span class="line">answer = <span class="string">&quot;&quot;</span></span><br><span class="line">temp = <span class="string">&quot;&quot;</span></span><br><span class="line">temp2 = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">while</span> (t1 &lt; t):</span><br><span class="line">temp = s[index:index+i]</span><br><span class="line"><span class="keyword">if</span> (t1 != <span class="number">0</span>):</span><br><span class="line">temp2 = s[index-i:index]</span><br><span class="line"><span class="keyword">if</span> (temp == temp2):</span><br><span class="line">num += <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> (num == <span class="number">1</span>):</span><br><span class="line">answer = answer + temp2</span><br><span class="line"><span class="keyword">if</span> (num &gt;= <span class="number">2</span> <span class="keyword">and</span> t1 != <span class="number">0</span> <span class="keyword">and</span> temp2 != temp):</span><br><span class="line">answer = answer + <span class="built_in">str</span>(num) + temp2</span><br><span class="line">num = <span class="number">1</span></span><br><span class="line">index += i</span><br><span class="line">t1 += <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> (t1==t):</span><br><span class="line"><span class="keyword">if</span> (num&gt;=<span class="number">2</span>):</span><br><span class="line">answer = answer + <span class="built_in">str</span>(num) + temp2</span><br><span class="line">num = <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">temp2 = s[index-i:index]</span><br><span class="line">answer = answer + temp2</span><br><span class="line">ans_list.append(<span class="built_in">len</span>(answer))</span><br><span class="line">ans_list.sort()</span><br><span class="line"><span class="keyword">return</span> ans_list[<span class="number">0</span>]</span><br></pre></td></tr></table></figure><p>무작정 코드를 써내려가서 많이 지져분합니다.. ㅎㅎ<br>언어를 파이썬으로 작성했기 때문에 쉽게 해결할 수 있었던 것 같습니다.</p>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/Python/">Python</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://westreed.github.io/tags/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8/">코딩테스트</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/02/202301/(2020%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B3%B5%EC%B1%84)-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%95%95%EC%B6%95-%EB%AC%B8%EC%A0%9C/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>리눅스에 git 설치하기</title>
+      <link>https://westreed.github.io/2023/01/02/202301/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90-git-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
+      <guid>https://westreed.github.io/2023/01/02/202301/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90-git-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
+      <pubDate>Mon, 02 Jan 2023 06:29:51 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;Git-설치하기&quot;&gt;&lt;a href=&quot;#Git-설치하기&quot; class=&quot;headerlink&quot; title=&quot;Git 설치하기&quot;&gt;&lt;/a&gt;Git 설치하기&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="Git-설치하기"><a href="#Git-설치하기" class="headerlink" title="Git 설치하기"></a>Git 설치하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure><h2 id="Git-초기설정"><a href="#Git-초기설정" class="headerlink" title="Git 초기설정"></a>Git 초기설정</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version <span class="comment"># 버젼확인</span></span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;이름&quot;</span></span><br><span class="line">git config --global user.mail <span class="string">&quot;메일주소&quot;</span></span><br></pre></td></tr></table></figure><h2 id="Git-프로젝트-복사하기"><a href="#Git-프로젝트-복사하기" class="headerlink" title="Git 프로젝트 복사하기"></a>Git 프로젝트 복사하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 프로젝트주소</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/Git/">Git</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Git/">Git</category>
+      
+      <category domain="https://westreed.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/">리눅스</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/02/202301/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90-git-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Git rm에 대해서</title>
+      <link>https://westreed.github.io/2023/01/02/202301/git-rm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/</link>
+      <guid>https://westreed.github.io/2023/01/02/202301/git-rm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/</guid>
+      <pubDate>Mon, 02 Jan 2023 06:20:04 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;rm-명령어&quot;&gt;&lt;a href=&quot;#rm-명령어&quot; class=&quot;headerlink&quot; title=&quot;rm 명령어&quot;&gt;&lt;/a&gt;rm 명령어&lt;/h2&gt;&lt;p&gt;.gitignore에 등록한 파일이 이미 repo에 업로드된 경우&lt;/p&gt;
+&lt;figure class</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="rm-명령어"><a href="#rm-명령어" class="headerlink" title="rm 명령어"></a>rm 명령어</h2><p>.gitignore에 등록한 파일이 이미 repo에 업로드된 경우</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached &lt;Filename&gt;</span><br></pre></td></tr></table></figure><p>명령어를 통해, 파일을 제거하고 다시 push 하면 된다.<br>–cached는 스테이징 영역에서만 파일이 삭제된다. 작업 디렉토리나 저장소에서는 삭제하지 않겠다는 의미이다.</p><p>참고로,</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> &lt;Filename&gt; <span class="comment">#앞에 git이 붙지 않은 rm은 작업 디렉토리에서 파일을 삭제하는 명령어</span></span><br><span class="line">git <span class="built_in">rm</span> &lt;Filename&gt; <span class="comment">#작업 디렉토리 및 스테이징 영역 모두 삭제</span></span><br></pre></td></tr></table></figure><p>이렇게 git 여부에 따라, 원격저장소의 파일을 삭제할지 파일저장소의 파일을 삭제할지 정할 수 있다.</p>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/Git/">Git</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Git/">Git</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/02/202301/git-rm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>포스트에 이미지와 유튜브영상 올려보기</title>
@@ -25,11 +144,13 @@
       
       
       
-      <content:encoded><![CDATA[<h2 id="이미지-업로드하기"><a href="#이미지-업로드하기" class="headerlink" title="이미지 업로드하기"></a>이미지 업로드하기</h2><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/robot.gif?style=centerme" alt="업로드된 이미지"/><p>source폴더 안에 images 폴더를 하나 만들어두고, 해당 폴더 안에 이미지를 넣어서 사용해야한다.<br>포스트 제목과 같은 폴더를 하나 만든 후, 해당 폴더 안에 이미지를 넣어두고, 아래 코드처럼 작성하면 이미지를 불러올 수 있다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/images/파일명.확장자?style=centerme&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;이미지설명&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><p>조오금 불편하긴 하지만 익숙해져야 할듯..<br>뒤에 <font color="#c0504d">style&#x3D;centerme</font>는 <a href="https://datadoctorblog.com/2020/03/24/HEXO-ICARUS-thumbnail/">링크</a>를 참고했다. style로 centerme를 주면 이미지가 자동으로 가운데정렬이 되는 방식.</p><h2 id="유튜브-영상-올리기"><a href="#유튜브-영상-올리기" class="headerlink" title="유튜브 영상 올리기"></a>유튜브 영상 올리기</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/TdjbenWWSxc" frameborder="0" loading="lazy" allowfullscreen></iframe></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube 영상링크 %&#125;</span><br><span class="line"></span><br><span class="line">ex. &#123;% youtube TdjbenWWSxc %&#125;</span><br></pre></td></tr></table></figure><p>그나마 유튜브는 Hexo에서 지원하는 양식을 사용하는게 제일 편하다.<br>영상링크의 모든 주소는 아니고 <span style="background:#b1ffff">id값</span>만 가져오면 된다.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="이미지-업로드하기"><a href="#이미지-업로드하기" class="headerlink" title="이미지 업로드하기"></a>이미지 업로드하기</h2><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202212/robot.gif?style=centerme" alt="업로드된 이미지"/><p>source폴더 안에 images 폴더를 하나 만들어두고, 해당 폴더 안에 이미지를 넣어서 사용해야한다.<br>포스트 제목과 같은 폴더를 하나 만든 후, 해당 폴더 안에 이미지를 넣어두고, 아래 코드처럼 작성하면 이미지를 불러올 수 있다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/images/파일명.확장자?style=centerme&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;이미지설명&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><p>조오금 불편하긴 하지만 익숙해져야 할듯..<br>뒤에 <font color="#c0504d">style&#x3D;centerme</font>는 <a href="https://datadoctorblog.com/2020/03/24/HEXO-ICARUS-thumbnail/">링크</a>를 참고했다. style로 centerme를 주면 이미지가 자동으로 가운데정렬이 되는 방식.</p><h2 id="유튜브-영상-올리기"><a href="#유튜브-영상-올리기" class="headerlink" title="유튜브 영상 올리기"></a>유튜브 영상 올리기</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/TdjbenWWSxc" frameborder="0" loading="lazy" allowfullscreen></iframe></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube 영상링크 %&#125;</span><br><span class="line"></span><br><span class="line">ex. &#123;% youtube TdjbenWWSxc %&#125;</span><br></pre></td></tr></table></figure><p>그나마 유튜브는 Hexo에서 지원하는 양식을 사용하는게 제일 편하다.<br>영상링크의 모든 주소는 아니고 <span style="background:#b1ffff">id값</span>만 가져오면 된다.</p>]]></content:encoded>
       
       
       <category domain="https://westreed.github.io/categories/Hexo/">Hexo</category>
       
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
       
       <category domain="https://westreed.github.io/tags/Hexo/">Hexo</category>
       
@@ -37,31 +158,6 @@
       
       
       <comments>https://westreed.github.io/2022/12/27/202212/%ED%8F%AC%EC%8A%A4%ED%8A%B8%EC%97%90-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%99%80-%EC%9C%A0%ED%8A%9C%EB%B8%8C%EC%98%81%EC%83%81-%EC%98%AC%EB%A0%A4%EB%B3%B4%EA%B8%B0/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>게시글 작성</title>
-      <link>https://westreed.github.io/2022/12/26/202212/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1/</link>
-      <guid>https://westreed.github.io/2022/12/26/202212/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1/</guid>
-      <pubDate>Mon, 26 Dec 2022 09:06:39 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h2 id=&quot;테스트-게시글&quot;&gt;&lt;a href=&quot;#테스트-게시글&quot; class=&quot;headerlink&quot; title=&quot;테스트 게시글&quot;&gt;&lt;/a&gt;테스트 게시글&lt;/h2&gt;&lt;p&gt;안녕하세요, 테스트를 위해 작성해보고 있습니다.&lt;/p&gt;
-&lt;figure class=&quot;high</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="테스트-게시글"><a href="#테스트-게시글" class="headerlink" title="테스트 게시글"></a>테스트 게시글</h2><p>안녕하세요, 테스트를 위해 작성해보고 있습니다.</p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">Speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;멍!&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://westreed.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
-      
-      
-      
-      <comments>https://westreed.github.io/2022/12/26/202212/%EA%B2%8C%EC%8B%9C%EA%B8%80-%EC%9E%91%EC%84%B1/#disqus_thread</comments>
       
     </item>
     
