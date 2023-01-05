@@ -10842,6 +10842,23 @@ article.article .content {
   line-height: 1.9em;
   margin-top: 20px;
 }
+article.article .content table thead th {
+  border: thin solid #dbdbdb;
+  border-bottom: medium solid #23241f;
+  border-left: none;
+  border-right: none;
+}
+article.article .content table tbody td {
+  border: thin solid #dbdbdb;
+  border-left: none;
+  border-right: none;
+}
+article.article .content .highlight-body table thead th {
+  border: none;
+}
+article.article .content .highlight-body table tbody td {
+  border: none;
+}
 article.article .content h1 {
   font-size: 1.95em;
   font-weight: 600;
@@ -11348,6 +11365,9 @@ figure.highlight figcaption.level .level-right a {
 }
 figure.highlight .highlight-body {
   overflow: auto;
+}
+figure.highlight .highlight-body .function_ {
+  color: #7caaff;
 }
 figure.highlight .gutter {
   text-align: right;

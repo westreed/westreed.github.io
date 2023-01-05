@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://westreed.github.io/2023/01/05/202301/%EC%9C%84%EC%83%81%EC%A0%95%EB%A0%AC-(Topology-Sort)/</loc>
+        <lastmod>2023-01-05T13:18:14.282Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://westreed.github.io/2023/01/03/202301/%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC%EC%9D%98-type%EC%9D%84-%EC%A7%80%EC%A0%95%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-defaultdict()/</loc>
         <lastmod>2023-01-03T08:10:37.657Z</lastmod>
         <changefreq>weekly</changefreq>
