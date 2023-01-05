@@ -9,8 +9,38 @@
     <atom:link href="https://westreed.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>갈대의 블로그</description>
-    <pubDate>Thu, 05 Jan 2023 13:28:17 GMT</pubDate>
+    <pubDate>Thu, 05 Jan 2023 13:40:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>재귀(Recursion)와 분할정복(Divide and Conquer)</title>
+      <link>https://westreed.github.io/2023/01/05/202301/%EC%9E%AC%EA%B7%80(Recursion)%EC%99%80-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5(Divide-and-Conquer)/</link>
+      <guid>https://westreed.github.io/2023/01/05/202301/%EC%9E%AC%EA%B7%80(Recursion)%EC%99%80-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5(Divide-and-Conquer)/</guid>
+      <pubDate>Thu, 05 Jan 2023 13:36:45 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;재귀-Recursion&quot;&gt;&lt;a href=&quot;#재귀-Recursion&quot; class=&quot;headerlink&quot; title=&quot;재귀 (Recursion)&quot;&gt;&lt;/a&gt;재귀 (Recursion)&lt;/h2&gt;&lt;p&gt;재귀함수는 함수의 내부에서 자기 자신을 다시 호</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="재귀-Recursion"><a href="#재귀-Recursion" class="headerlink" title="재귀 (Recursion)"></a>재귀 (Recursion)</h2><p>재귀함수는 함수의 내부에서 자기 자신을 다시 호출하는 함수를 뜻한다.<br>ex) 피보나치 수열, 팩토리얼 구현 등</p><p>일반적인 재귀 함수의 특징<br><strong>1. 함수의 호출이 트리 구조를 가진다.</strong><br>(트리란 사이클이 없는 연결 그래프를 의미)</p><p><strong>2. 재귀적으로 함수를 호출하는 대신 바로 함수를 종료하는 기저 사례(base case)를 가진다.</strong><br>(기저 사례는 트리의 리프 노드(&#x3D; 자식 노드가 없는 노드)에 해당)</p><h2 id="분할-정복-Divide-and-Conquer"><a href="#분할-정복-Divide-and-Conquer" class="headerlink" title="분할 정복 (Divide and Conquer)"></a>분할 정복 (Divide and Conquer)</h2><p>큰 문제를 작은 문제로 분할(divide)하고 나눠진 작은 문제를 하나하나씩 정복(conquer)하여, 작은 문제의 답으로 큰 문제의 답을 구하는 것을 분할정복이라고 합니다.</p><p>이때 기저 사례(base case)를 둬서 더 이상 Divide하지 않고 바로 답을 구하는 기저 사례를 만들면 문제를 쪼갠 뒤 합치는 과정을 통해 원래 문제의 답을 구할 수 있다. 이러한 분할 정복의 구조 때문에 거의 대부분 분할 정복은 재귀로 구현된다.</p><h2 id="중복-제거-Memoization-amp-Tabulation"><a href="#중복-제거-Memoization-amp-Tabulation" class="headerlink" title="중복 제거 (Memoization &amp; Tabulation)"></a>중복 제거 (Memoization &amp; Tabulation)</h2><p>재귀함수는 알고리즘을 간단히 축약할 수 있다는 장점이 있지만, 스택 오버 플로어 문제와 런타임이 비교적 오래 걸린다는 단점이 있다. 단점을 극복하기 위해, Memoization과 Tabulation 이 두 개는 메모리를 더 사용하는 대신, 계산 시간을 줄인다.</p><p>예를 들어, 다음과 같은 피보나치 수열을 구하는 예제가 있다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">if</span> num == <span class="number">1</span> <span class="keyword">or</span> num == <span class="number">2</span>: <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> fibonacci(num - <span class="number">1</span>) + fibonacci(num - <span class="number">2</span>)</span><br></pre></td></tr></table></figure><h3 id="Memoization"><a href="#Memoization" class="headerlink" title="Memoization"></a>Memoization</h3><p>재귀함수에서 일어나는 중복 계산을 피하기 위한 방법이다. 피보나치를 계산해서 배열에 저장해놓고, 필요할 때 이용한다. 오버헤드는 발생하지 않는다. 런타임 시간은 줄고, 메모리 사용은 증가한다는 특징이 있다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">record = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>)]</span><br><span class="line">record[<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">record[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">global</span> record</span><br><span class="line">    index = num - <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> record[index] == <span class="number">0</span>:</span><br><span class="line">        record[index] = fibonacci(num - <span class="number">1</span>) + fibonacci(num - <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> record[index]</span><br></pre></td></tr></table></figure><p>값이 리스트에 저장해되어 있기 때문에 중복 계산을 생략할 수 있다.</p><h3 id="Tabulation"><a href="#Tabulation" class="headerlink" title="Tabulation"></a>Tabulation</h3><p>Memoiation과 동일하게 함수 중복을 줄여주는 방식. 다른 점이라면 미리 피보나치를 필요한 만큼 계산해두고 꺼내쓰는 방식이다.</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">record = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50</span>)]</span><br><span class="line">record[<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">record[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci_table</span>():</span><br><span class="line">    <span class="keyword">global</span> record</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">50</span>):</span><br><span class="line">        record[i] = record[i-<span class="number">1</span>] + record[i-<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">fibonacci_table()</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://westreed.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/">알고리즘</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/05/202301/%EC%9E%AC%EA%B7%80(Recursion)%EC%99%80-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5(Divide-and-Conquer)/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>위상정렬 (Topology Sort)</title>
