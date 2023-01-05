@@ -10296,6 +10296,10 @@ body > .section {
   flex: 1;
   height: 41vw;
 }
+.titleLine {
+  padding-bottom: 1vw;
+  border-bottom: medium dashed #e3e3e3;
+}
 @media screen and (min-width: 1088px) {
   .blogTitle {
     top: 261px;
