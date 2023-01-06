@@ -11373,6 +11373,9 @@ figure.highlight .highlight-body {
 figure.highlight .highlight-body .function_ {
   color: #7caaff;
 }
+figure.highlight .highlight-body .class_ {
+  color: #ffcb6b;
+}
 figure.highlight .gutter {
   text-align: right;
 }
