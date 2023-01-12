@@ -9,8 +9,40 @@
 
 
     <url>
-        <loc>https://westreed.github.io/2023/01/08/202301/Unpacking/</loc>
-        <lastmod>2023-01-08T13:57:54.255Z</lastmod>
+        <loc>https://westreed.github.io/2023/01/12/202301/Doc-String/</loc>
+        <lastmod>2023-01-12T09:13:09.397Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/02/202301/(2019%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B2%A8%EC%9A%B8%EC%9D%B8%ED%84%B4%EC%8B%AD)-%ED%81%AC%EB%A0%88%EC%9D%B8-%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0-%EA%B2%8C%EC%9E%84/</loc>
+        <lastmod>2023-01-12T08:57:40.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/02/202301/(2020%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B3%B5%EC%B1%84)-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%95%95%EC%B6%95-%EB%AC%B8%EC%A0%9C/</loc>
+        <lastmod>2023-01-12T08:57:38.218Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/03/202301/%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC%EC%9D%98-type%EC%9D%84-%EC%A7%80%EC%A0%95%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-defaultdict()/</loc>
+        <lastmod>2023-01-12T08:57:35.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/05/202301/%EC%9C%84%EC%83%81%EC%A0%95%EB%A0%AC-(Topology-Sort)/</loc>
+        <lastmod>2023-01-12T08:57:30.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +50,31 @@
 
     <url>
         <loc>https://westreed.github.io/2023/01/08/202301/yield%EC%99%80-%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0/</loc>
-        <lastmod>2023-01-08T13:41:46.737Z</lastmod>
+        <lastmod>2023-01-12T08:57:21.026Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/08/202301/Unpacking/</loc>
+        <lastmod>2023-01-12T08:57:17.820Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/02/202301/git-rm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/</loc>
+        <lastmod>2023-01-12T08:57:14.712Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://westreed.github.io/2023/01/03/202301/for-else%EB%AC%B8-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
+        <lastmod>2023-01-12T08:57:06.354Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,7 +82,7 @@
 
     <url>
         <loc>https://westreed.github.io/2023/01/06/202301/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%A0%95%EB%A0%AC/</loc>
-        <lastmod>2023-01-06T14:07:05.474Z</lastmod>
+        <lastmod>2023-01-12T08:57:03.711Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -35,46 +91,6 @@
     <url>
         <loc>https://westreed.github.io/2023/01/05/202301/%EC%9E%AC%EA%B7%80(Recursion)%EC%99%80-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5(Divide-and-Conquer)/</loc>
         <lastmod>2023-01-05T13:40:36.527Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://westreed.github.io/2023/01/05/202301/%EC%9C%84%EC%83%81%EC%A0%95%EB%A0%AC-(Topology-Sort)/</loc>
-        <lastmod>2023-01-05T13:28:17.612Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://westreed.github.io/2023/01/03/202301/%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC%EC%9D%98-type%EC%9D%84-%EC%A7%80%EC%A0%95%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-defaultdict()/</loc>
-        <lastmod>2023-01-03T08:10:37.657Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://westreed.github.io/2023/01/03/202301/for-else%EB%AC%B8-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
-        <lastmod>2023-01-03T08:01:15.024Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://westreed.github.io/2023/01/02/202301/(2019%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B2%A8%EC%9A%B8%EC%9D%B8%ED%84%B4%EC%8B%AD)-%ED%81%AC%EB%A0%88%EC%9D%B8-%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0-%EA%B2%8C%EC%9E%84/</loc>
-        <lastmod>2023-01-02T07:33:11.500Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://westreed.github.io/2023/01/02/202301/(2020%EC%B9%B4%EC%B9%B4%EC%98%A4%EA%B3%B5%EC%B1%84)-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%95%95%EC%B6%95-%EB%AC%B8%EC%A0%9C/</loc>
-        <lastmod>2023-01-02T07:33:07.504Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -91,14 +107,6 @@
     <url>
         <loc>https://westreed.github.io/2023/01/02/202301/%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90-git-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</loc>
         <lastmod>2023-01-02T06:43:39.104Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://westreed.github.io/2023/01/02/202301/git-rm%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/</loc>
-        <lastmod>2023-01-02T06:27:50.187Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
