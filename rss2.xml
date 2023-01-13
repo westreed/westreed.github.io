@@ -9,8 +9,42 @@
     <atom:link href="https://westreed.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>갈대의 블로그</description>
-    <pubDate>Thu, 12 Jan 2023 09:13:09 GMT</pubDate>
+    <pubDate>Fri, 13 Jan 2023 11:47:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Spring 시작하기</title>
+      <link>https://westreed.github.io/2023/01/13/202301/Spring-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <guid>https://westreed.github.io/2023/01/13/202301/Spring-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
+      <pubDate>Fri, 13 Jan 2023 11:10:48 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;개요&quot;&gt;&lt;a href=&quot;#개요&quot; class=&quot;headerlink&quot; title=&quot;개요&quot;&gt;&lt;/a&gt;개요&lt;/h2&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/im</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202301/spring.png?style=centerme" alt="Java Spring"/><ul><li>스프링 프레임워크는 자바 언어 기반의 <span style="background:#d3f8b6">웹 프레임워크</span>이다.</li><li>개발군 중 <span style="background:#fff88f">백엔드(Backend)</span>에 속하는 프레임워크로, 서버 개발을 담당한다.</li><li>스프링을 배우는 이유 중 하나로 한국 <a href="https://namu.wiki/w/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%ED%91%9C%EC%A4%80%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC" title="전자정부표준프레임워크">전자정부표준프레임워크</a>의 기반 기술이며 <a href="https://namu.wiki/w/%ED%95%9C%EA%B5%AD%EC%A0%95%EB%B3%B4%ED%99%94%EC%A7%84%ED%9D%A5%EC%9B%90" title="한국정보화진흥원">한국정보화진흥원</a>에서는 공공기관의 웹 서비스 제공 시 스프링을 권장하고 있다.</li></ul><h2 id="스프링의-특징"><a href="#스프링의-특징" class="headerlink" title="스프링의 특징"></a>스프링의 특징</h2><table><thead><tr><th>특징</th><th>설명</th></tr></thead><tbody><tr><td>POJO(Plain Old Java Object)</td><td>별도의 프레임워크 없이 Java EE를 사용할 때에 비해 특정 인터페이스를 직접 구현하거나 상속받을 필요가 없어 기존 라이브러리를 지원하기가 용이하고, 객체가 가볍다.</td></tr><tr><td>관점 지향 프로그래밍(Aspect Oriented Programming, AOP)</td><td>로깅, 트랜잭션, 보안 등 여러 모듈에서 공통적으로 사용하는 기능을 분리하여 관리할 수 있다.</td></tr><tr><td>의존성 주입(Dependency Injection, DI)</td><td>프로그래밍에서 구성요소 간의 의존 관계가 소스코드 내부가 아닌 외부에서 설정을 통해 정의되는 방식이다. 코드 재사용을 높여 소스코드를 다양한 곳에 사용할 수 있으며 모듈간의 결합도도 낮출 수 있다. 계층, 서비스 간에 의존성이 존재하는 경우 스프링 프레임워크가 서로 연결시켜준다.</td></tr><tr><td>제어 역전(Inversion of Control, IoC)</td><td>제어 역전은 이와 반대로 외부 라이브러리 코드가 개발자의 코드를 호출하게 된다. 즉, 제어권이 프레임워크에게 있어 필요에 따라 스프링 프레임워크가 사용자의 코드를 호출한다.</td></tr><tr><td>생명주기 관리</td><td>스프링 프레임워크는 Java 객체의 생성, 소멸을 직접 관리하며 필요한 객체만 사용할 수 있다.</td></tr></tbody></table><h2 id="프로젝트-생성하기"><a href="#프로젝트-생성하기" class="headerlink" title="프로젝트 생성하기"></a>프로젝트 생성하기</h2><h3 id="개발환경"><a href="#개발환경" class="headerlink" title="개발환경"></a>개발환경</h3><ul><li>Java 설치</li><li>IDE : <a href="https://www.jetbrains.com/idea/">IntelliJ</a> (Ultimate 버젼이 Spring을 지원해주지만, Community 버젼 기준으로 설명, 돈 없음..ㅠ)</li></ul><h3 id="생성하기"><a href="#생성하기" class="headerlink" title="생성하기"></a>생성하기</h3><ol><li><p><a href="https://start.spring.io/">https://start.spring.io</a> 에서, 스프링 프로젝트를 만들 때 빌드방식<code>(Gradle, Maven)</code>이나  프로그래밍 언어<code>(Java, Kotlin, Groovy)</code>를 정하고 스프링 버젼 및 필요한 <code>Dependencies</code>를 지정할 수 있다.<br></p><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202301/spring-initializr.png?style=centerme" alt="Spring Initializr"/></li><li><p>저는 위와 같이 설정했습니다. Spring은 백엔드 개발로 프론트엔드 개발을 따로 하실거면, <code>Dependencies</code>에서 Thymeleaf는 빼셔도 됩니다.<br></p><img src="https://cdn.jsdelivr.net/gh/westreed/westreed.github.io@main/images/202301/open-project.png?style=centerme" alt="프로젝트 열기"/></li><li><p><code>GENERATE</code>를 누르면, 압축파일을 다운받게 됩니다. 원하는 위치에 두시고 압축을 푼 후, IntelliJ로 <code>build.gradle</code>을 열어줍니다. <code>[Open as Project]</code>로 선택해서 열어주시면 됩니다.<br><br></p></li><li><p>처음 실행하게 되면, 필요한 파일들을 다운받는 과정으로 시간이 필요합니다. 여기까지 진행하셨으면, 프로젝트 생성은 끝입니다!</p></li></ol>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Java-Spring/">Java-Spring</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://westreed.github.io/tags/Spring/">Spring</category>
+      
+      <category domain="https://westreed.github.io/tags/SpringBoot/">SpringBoot</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/13/202301/Spring-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Doc String</title>
