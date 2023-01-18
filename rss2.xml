@@ -9,8 +9,38 @@
     <atom:link href="https://westreed.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>갈대의 블로그</description>
-    <pubDate>Fri, 13 Jan 2023 11:47:03 GMT</pubDate>
+    <pubDate>Wed, 18 Jan 2023 06:35:14 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Java Class 공부</title>
+      <link>https://westreed.github.io/2023/01/18/202301/Java-Class-%EA%B3%B5%EB%B6%80/</link>
+      <guid>https://westreed.github.io/2023/01/18/202301/Java-Class-%EA%B3%B5%EB%B6%80/</guid>
+      <pubDate>Wed, 18 Jan 2023 06:05:53 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;클래스-Class&quot;&gt;&lt;a href=&quot;#클래스-Class&quot; class=&quot;headerlink&quot; title=&quot;클래스(Class)&quot;&gt;&lt;/a&gt;클래스(Class)&lt;/h2&gt;&lt;p&gt;클래스(Class)는 일종의 틀입니다. 쿠키같은 과자를 만들 때, 틀모양</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="클래스-Class"><a href="#클래스-Class" class="headerlink" title="클래스(Class)"></a>클래스(Class)</h2><p>클래스(Class)는 일종의 틀입니다. 쿠키같은 과자를 만들 때, 틀모양에 따라 쿠키를 찍어낼 수 있다. 그런데, 재료에 따라 같은 모양(틀)이어도 서로 다른 쿠키가 완성된다.</p><p>그리고 과자틀에 의해서 만들어진 과자들을 <span style="background:#fff88f">객체(Object)</span>라고 한다.</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();</span><br><span class="line">        System.out.println(cat.name); <span class="comment">// null 출력됨</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Animal Class가 있고, main에서 Animal cat &#x3D; new Animal(); 코드에 의해 cat이라는 객체가 생성된다.</p><h3 id="메서드-Method"><a href="#메서드-Method" class="headerlink" title="메서드(Method)"></a>메서드(Method)</h3><p>클래스에는 객체 변수와 더불어 <span style="background:#fff88f">메서드(Method)</span>라는 것이 있다. 메서드는 클래스 내에 구현된 함수를 의미하는데 보통 함수라고 말하지 않고 메서드라고 말한다.</p><p>위의 코드에서는 Animal Class 안에 name이라는 객체변수가 있는데, 어디에도 할당이 없기 때문에 name을 print해보면, null이 나오게 된다.</p><p>이제 메서드를 이용하여 Animal 클래스의 객체 변수인 name 에 값을 대입해보자.</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>();</span><br><span class="line">        cat.setName(<span class="string">&quot;먀옹이&quot;</span>);</span><br><span class="line">        System.out.println(cat.name); <span class="comment">// 먀옹이 출력됨</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="생성자-Constructor"><a href="#생성자-Constructor" class="headerlink" title="생성자(Constructor)"></a>생성자(Constructor)</h3><p>메서드명이 클래스명과 동일하고 리턴 자료형을 정의하지 않는 메서드를 생성자(Constructor)라고 한다.</p><p><em>생성자의 규칙</em></p><ol><li>클래스명과 메서드명이 동일하다.</li><li>리턴타입을 정의하지 않는다. (void도 사용하지 않는다.)</li></ol><p>생성자는 객체가 생성될 때 호출된다. 즉, 생성자는 다음과 같이 new 키워드가 사용될 때 호출된다.<br>또한, 생성자는 메서드와 마찬가지로 다양한 입력을 받을 수 있다.</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line"></span><br><span class="line">    Animal (String name)&#123; <span class="comment">// 생성자</span></span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Sample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Animal</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Animal</span>(<span class="string">&quot;먀옹이&quot;</span>);</span><br><span class="line">        System.out.println(cat.name); <span class="comment">// 먀옹이 출력됨</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      <category domain="https://westreed.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/Java/">Java</category>
+      
+      
+      <category domain="https://westreed.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/">프로그래밍</category>
+      
+      <category domain="https://westreed.github.io/tags/Java/">Java</category>
+      
+      
+      <comments>https://westreed.github.io/2023/01/18/202301/Java-Class-%EA%B3%B5%EB%B6%80/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Spring 시작하기</title>
